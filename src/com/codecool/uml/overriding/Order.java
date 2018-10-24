@@ -32,6 +32,13 @@ public class Order implements Orderable {
         return false;
     }
 
+    @Override
+    public String toString() {
+        return String.format("id:%d, status:%s",
+                this.id,
+                this.status);
+    }
+
     Order(){
         this.id = id_counter++;
         this.status = NEW;
